@@ -4,14 +4,13 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                // Use the SSH URL for the repository
-                git 'git@github.com:Abhi03-tech/jenkins-ci-cd-bash.git'
+                // Specify the credentials ID
+                git branch: 'main', url: 'git@github.com:Abhi03-tech/jenkins-ci-cd-bash.git', credentialsId: 'your-credentials-id'
             }
         }
 
         stage('Run Script') {
             steps {
-                // Replace script.sh with your script name
                 sh './script.sh'
             }
         }
@@ -28,4 +27,3 @@ pipeline {
         }
     }
 }
-
