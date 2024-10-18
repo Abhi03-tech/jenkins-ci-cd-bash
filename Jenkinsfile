@@ -5,7 +5,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 // Use the SSH URL for the repository
-                git 'git@github.com:Abhi03-tech/jenkins-ci-cd-bash.git'
+                git branch: 'main', url: 'git@github.com:Abhi03-tech/jenkins-ci-cd-bash.git'
             }
         }
 
