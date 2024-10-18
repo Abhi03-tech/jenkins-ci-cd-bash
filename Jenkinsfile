@@ -14,6 +14,8 @@ pipeline {
                 // Replace script.sh with your script name
                 sh './script.sh'
             }
+            steps {
+                sh './new_script.sh'}
         }
     }
 }
