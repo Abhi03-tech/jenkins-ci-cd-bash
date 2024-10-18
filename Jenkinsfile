@@ -14,8 +14,11 @@ pipeline {
                 // Replace script.sh with your script name
                 sh './script.sh'
             }
+        stage('Run Script') {
             steps {
-                sh './new_script.sh'}
+                // Replace script.sh with your script name
+                sh './new_script.sh'
+            }
         }
     }
 }
